@@ -14,9 +14,8 @@ public class Address implements Serializable{
 	public String street ;
 	public String city;
 	public String state ;
-	public String zip ;
-	public String country ;
-	
+	public String zipCode ;
+	public String country ;	
 	
 	/**
 	 * Return person's street address.
@@ -31,8 +30,7 @@ public class Address implements Serializable{
 	 */
 	public void setStreet(String street) {
 		this.street = street;
-	}
-	
+	}	
 	
 	/**
 	 * @return the city
@@ -47,8 +45,7 @@ public class Address implements Serializable{
 	public void setCity(String city) {
 		this.city = city;
 	}
-	
-	
+		
 	/**
 	 * @return the state acronym
 	 */
@@ -61,23 +58,21 @@ public class Address implements Serializable{
 	 */
 	public void setState(String state) {
 		this.state = state;
-	}
-	
+	}	
 	
 	/**
 	 * @return the zip
 	 */
-	public String getZip() {
-		return zip;
+	public String getZipCode() {
+		return zipCode ;
 	}
 	
 	/**
 	 * @param zip the zip to set
 	 */
-	public void setZip(String zip) {
-		this.zip = zip;
-	}
-	
+	public void setZipCode(String zip) {
+		this.zipCode = zip;
+	}	
 	
 	/**
 	 * @return the country
@@ -91,6 +86,5 @@ public class Address implements Serializable{
 	 */
 	public void setCountry(String country) {
 		this.country = country;
-	}
-	
+	}	
 }
