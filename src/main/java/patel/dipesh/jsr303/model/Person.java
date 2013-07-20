@@ -2,21 +2,41 @@ package patel.dipesh.jsr303.model;
 
 import java.io.Serializable;
 
+import javax.validation.Valid;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
 /**
  * 
  * Sample model class representing a "Person"
+ * Some regexp patterns are referenced from OWASP documentation.
  * @author Dipesh Patel
  *
  */
 public class Person implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
+
+	@Pattern(regexp="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*){1,100}$")
+	private String firstName ;
 	
-	private String firstName ;	
+	@Pattern(regexp="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*){1,100}$")	
 	private String lastName ;	
-	private String eMail ;	
+
+	@Pattern(regexp="^[\\w-]+(?:\\.[\\w-]+)*@(?:[\\w-]+\\.)+[a-zA-Z]{2,7}$")
+	private String eMail ;
+	
+	@Min(18)
+	@Max(100)
 	private Integer age ;
+	
+	@Pattern(regexp="^\\D?(\\d{3})\\D?\\D?(\\d{3})\\D?(\\d{4})$")
 	private String phone ;
+	
+	@NotNull()
+	@Valid()
 	private Address address ;
 	
 	/*
