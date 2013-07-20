@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>patel.dipesh.samples</groupId>
 	<artifactId>jsr303</artifactId>
-	<name>jsr303-starter</name>
+	<name>spring-jsr303</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<developers>
