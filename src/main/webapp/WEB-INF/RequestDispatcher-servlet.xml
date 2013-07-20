@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:mvc="http://www.springframework.org/schema/mvc"   
+   xmlns:oxm="http://www.springframework.org/schema/oxm"   
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="
+   http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/mvc 
+   http://www.springframework.org/schema/mvc/spring-mvc.xsd
+   http://www.springframework.org/schema/oxm 
+   http://www.springframework.org/schema/oxm/spring-oxm.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context.xsd">
+   
+	<context:component-scan base-package="patel.dipesh.samples.helloworld.controller" />
+	<mvc:annotation-driven />
+	
+	<!-- JSP View Implementation -->
+	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+	<!-- Map default path to view name index which maps to index.jsp -->
+	<mvc:view-controller path="/" view-name="index"/>
+
+</beans>
