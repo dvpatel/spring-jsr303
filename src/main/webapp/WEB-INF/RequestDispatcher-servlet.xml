@@ -14,9 +14,12 @@
    http://www.springframework.org/schema/context 
    http://www.springframework.org/schema/context/spring-context.xsd">
    
-	<context:component-scan base-package="patel.dipesh.samples.helloworld.controller" />
+	<context:component-scan base-package="patel.dipesh.jsr303" />
 	<mvc:annotation-driven />
 	
+	<!-- Data validation -->
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+		
 	<!-- JSP View Implementation -->
 	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"/>

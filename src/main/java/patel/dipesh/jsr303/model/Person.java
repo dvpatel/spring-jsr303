@@ -11,7 +11,7 @@ import javax.validation.constraints.Pattern;
 /**
  * 
  * Sample model class representing a "Person"
- * Some regexp patterns are referenced from OWASP documentation.
+ * Some regexp patterns are referenced from OWASP regex repository documentation.
  * @author Dipesh Patel
  *
  */
@@ -26,7 +26,7 @@ public class Person implements Serializable{
 	private String lastName ;	
 
 	@Pattern(regexp="^[\\w-]+(?:\\.[\\w-]+)*@(?:[\\w-]+\\.)+[a-zA-Z]{2,7}$")
-	private String eMail ;
+	private String email ;
 	
 	@Min(18)
 	@Max(100)
@@ -60,7 +60,7 @@ public class Person implements Serializable{
 	 * @param inp last name.
 	 */
 	public void setLastName(String inp) {		
-		this.firstName = inp ;		
+		this.lastName = inp ;		
 	}
 	
 	/*
@@ -76,7 +76,7 @@ public class Person implements Serializable{
 	 * @param inp email address. 
 	 */
 	public void setEmail(String inp) {		
-		this.eMail = inp ;		
+		this.email = inp ;		
 	}
 	
 	/*
@@ -84,7 +84,7 @@ public class Person implements Serializable{
 	 * @return person's email address
 	 */		
 	public String getEmail() {
-		return this.eMail ;		
+		return this.email ;		
 	}
 
 	/*
