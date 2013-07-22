@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Test Form</title>
+</head>
+<body>
+
+<h2>Sample Form for Data Validation Demonstration</h2>
+<form id="person" action="process" method="POST">
+
+#springBind("person")
+#if($status.errors.hasErrors())
+	<div id="person.errors" class="errorBlock">
+    ## Global error messages
+    #foreach($e in $status.errorMessages)
+        ${e}<br/>
+    #end
+    ## Field error messages
+    #foreach($f in $status.errors.fieldErrors)
+        #springBind("person.${f.field}")
+        #foreach($e in $status.errorMessages)
+            ${e}<br/>
+        #end
+    #end
+    </div>
+#end
+	
+   <table>
+    <tr>
+        <td>First Name</td>
+        <td><input id="firstName" name="firstName" type="text" value="$!{person.firstName}"/></td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td><input id="lastName" name="lastName" type="text" value="$!{person.lastName}"/></td>
+    </tr>
+
+    <tr>
+        <td>e-Mail</td>
+        <td><input id="email" name="email" type="text" value="$!{person.email}"/></td>
+		<td></td>        
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td><input id="age" name="age" type="text" value="$!{person.age}"/></td>
+		<td></td>        
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Submit"/>
+        </td>
+    </tr>
+</table>  
+</form>
+
+</body>
+</html>

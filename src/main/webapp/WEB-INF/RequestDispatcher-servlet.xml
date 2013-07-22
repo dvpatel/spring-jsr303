@@ -14,19 +14,21 @@
    http://www.springframework.org/schema/context 
    http://www.springframework.org/schema/context/spring-context.xsd">
    
-	<context:component-scan base-package="patel.dipesh.jsr303" />
+	<context:component-scan base-package="patel.dipesh.jsr303.controller" />
 	<mvc:annotation-driven />
 	
 	<!-- Data validation -->
 	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
-		
-	<!-- JSP View Implementation -->
-	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/jsp/"/>
-		<property name="suffix" value=".jsp"/>
+				
+	<!-- Velocity View Templates -->
+	<bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+  		<property name="resourceLoaderPath" value="/WEB-INF/templates/"/>
 	</bean>
-
-	<!-- Map default path to view name index which maps to index.jsp -->
-	<mvc:view-controller path="/" view-name="index"/>
-
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+  		<property name="cache" value="true"/>
+  		<property name="prefix" value=""/>
+  		<property name="suffix" value=".vm"/>
+	  	<property name="exposeSpringMacroHelpers" value="true"/>
+	</bean>
+						
 </beans>
