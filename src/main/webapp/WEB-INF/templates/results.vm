@@ -7,12 +7,13 @@
         </header>
         <section>
         	<table>
+				<tr><td colspan="2"><b>Basic Information</b></td></tr>
 				<tr><td>First name:</td><td>$!{person.firstName}</td></tr>
 				<tr><td>Last name:</td><td>$!{person.lastName}</td></tr>
 				<tr><td>E-Mail:</td><td>$!{person.email}</td></tr>
 				<tr><td>Age:</td><td>$!{person.age}</td></tr>
 				<tr><td>Phone:</td><td>$!{person.phone}</td></tr>
-				<tr><td colspan="2">Address:</td></tr>
+				<tr><td colspan="2"><b>Address</b></td></tr>
 				<tr><td>Street:</td><td>$!{person.address.street}</td></tr>
 				<tr><td>City:</td><td>$!{person.address.city}</td></tr>
 				<tr><td>State:</td><td>$!{person.address.state}</td></tr>

@@ -1,5 +1,10 @@
 package patel.dipesh.jsr303.controller;
 
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -71,16 +76,18 @@ public class RegistrationController {
 			return "results" ;			
 		}
 	}
+
 	
 	/*
 	 * Error page template
 	 */
 	@RequestMapping(value = "/error", method = RequestMethod.GET)
-	public String showError() {
-				
+	public String showError(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		log.error("Invalid request.") ;
 		return "error" ;
 		
 	}	
+		
 
-	
 }
