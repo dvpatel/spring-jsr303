@@ -17,30 +17,9 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
-	<!-- Handlers for various system errors -->
+	<!-- Handlers for unhandled errors -->
 	<error-page>
-		<error-code>400</error-code>
 		<location>/error</location>
   	</error-page>	
-	<error-page>
-		<error-code>404</error-code>
-		<location>/error</location>
-  	</error-page>
-	<error-page>
-		<error-code>405</error-code>
-		<location>/error</location>
-  	</error-page>
-	<error-page>
-		<error-code>406</error-code>
-		<location>/error</location>
-  	</error-page>
-	<error-page>
-		<error-code>415</error-code>
-		<location>/error</location>
-  	</error-page>
-	<error-page>
-		<error-code>500</error-code>
-		<location>/error</location>
-  	</error-page>
 	
 </web-app>
