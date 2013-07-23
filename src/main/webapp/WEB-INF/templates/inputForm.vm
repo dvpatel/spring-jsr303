@@ -19,7 +19,7 @@
 				  
 				<label for="email">Email Address:</label>
 				#springBind( "person.email" )									  
-				<input type="email" id="email" name="${status.expression}" value="$!{status.value}" placeholder="me@somewhere.com" />  
+				<input type="text" id="email" name="${status.expression}" value="$!{status.value}" placeholder="me@somewhere.com" />  
 				#foreach($error in $status.errorMessages) <div class="errorBlock">$error</div> #end			
 
 				<label for="name">Age:</label>  

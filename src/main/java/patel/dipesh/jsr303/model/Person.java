@@ -25,7 +25,7 @@ public class Person implements Serializable{
 	@Pattern(regexp="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*){1,100}$", message="Invalid last name.")	
 	private String lastName ;	
 
-	@Pattern(regexp="^[\\w-]+(?:\\.[\\w-]+)*@(?:[\\w-]+\\.)+[a-zA-Z]{2,7}$", message="Invalid email.")
+	@Pattern(regexp="^[\\w-]+(?:\\.[\\w-]+)*@(?:[\\w-]+\\.)+[a-zA-Z]{2,7}$", message="Invalid email address.")
 	private String email ;
 	
 	@Min(value=18, message="You must be > 18 to use this form.")
