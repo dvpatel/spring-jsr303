@@ -44,7 +44,7 @@
 				<input type="text" id="city" name="address.city" value="$!{status.value}" placeholder="Enter City"/>
 				#foreach($error in $status.errorMessages) <div class="errorBlock">$error</div> #end			
 
-				<label for="name">State:</label>  
+				<label for="name">State Acronym:</label>  
 				#springBind( "person.address.state" )		
 				<input type="text" id="state" name="address.state" value="$!{status.value}" placeholder="Enter State"/>
 				#foreach($error in $status.errorMessages) <div class="errorBlock">$error</div> #end			
@@ -54,7 +54,7 @@
 				<input type="text" id="zipCode" name="address.zipCode" value="$!{status.value}" placeholder="Enter Zip Code"/>
 				#foreach($error in $status.errorMessages) <div class="errorBlock">$error</div> #end			
 				  
-				<label for="name">Country:</label>  
+				<label for="name">Country Acronym:</label>  
 				#springBind( "person.address.country" )		
 				<input type="text" id="country" name="address.country" value="$!{status.value}" placeholder="Enter Country"/>
 				#foreach($error in $status.errorMessages) <div class="errorBlock">$error</div> #end			
@@ -72,7 +72,7 @@
 
     <aside>
         <h3>Background</h3>
-        <p>This is a sample application that demonstrates how to perform data validation using JSR-303 Annotations.  Future example will do the same but using a declarative approach for data validation rather than annotations.  The program is based on Spring MVC, Velocity rendering engine, and HTML5 boilerplate templates.  And many of the RegEx patterns used for data validation are referenced from OWASP regex repository</p>
+        <p>This is a sample application that demonstrates how to perform data validation using JSR-303, specifically using JSR-303 Annotations.  Future example will provide the same functionality but using a declarative approach for data validation rather than Java Annotations.  This sample is developed using Spring MVC, Velocity rendering engine, HTML5 boilerplate templates, and other Open Source assets.  Lastly, many of the RegEx patterns used for data validation are referenced from OWASP regex repository.</p>
     </aside>
 
 </div> <!-- #main -->
