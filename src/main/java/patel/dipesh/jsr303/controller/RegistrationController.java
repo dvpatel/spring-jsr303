@@ -26,7 +26,7 @@ import patel.dipesh.jsr303.model.Person;
 public class RegistrationController {
 
 	protected final Log log = LogFactory.getLog(getClass());
-
+	
 	/*
 	 * Present input form
 	 */
@@ -35,8 +35,6 @@ public class RegistrationController {
 				
 		//  Form fields will be binded to Person and Address object.
 		Person person = new Person() ;
-		Address address = new Address() ;
-		person.setAddress(address) ;
 						
 		//  Make Models available to form ;
 		model.addAttribute("person", person) ;
@@ -47,13 +45,14 @@ public class RegistrationController {
 	/*
 	 * Input processor.  Present results page or error page which is registration page with in-line error
 	 */
-	@RequestMapping(value = "/process", method = RequestMethod.POST)
+	@RequestMapping(value = "/", method = RequestMethod.POST)
 	public String processRegistrationForm(@ModelAttribute("person") @Valid Person person, BindingResult result, ModelMap model) {	
 
 		/*
 		 * Spring will invoke Hibernate's JSR303 validator for validating user input that maps to
 		 * Person / Address objects 
 		 */
+		
 		if (result.hasErrors()) {
 			
 			//  Error during registration!!!
@@ -69,7 +68,19 @@ public class RegistrationController {
 			/**** Perform your business logic processing ;  This sample has none ; ****/
 			
 			//  Go to success page.
-			return "successPage" ;			
+			return "results" ;			
 		}
 	}
+	
+	/*
+	 * Error page template
+	 */
+	@RequestMapping(value = "/error", method = RequestMethod.GET)
+	public String showError() {
+				
+		return "error" ;
+		
+	}	
+
+	
 }

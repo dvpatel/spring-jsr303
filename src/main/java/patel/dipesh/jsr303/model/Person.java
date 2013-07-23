@@ -19,25 +19,29 @@ public class Person implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
-	@Pattern(regexp="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*){1,100}$")
+	@Pattern(regexp="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*){1,100}$", message="Invalid first name.")
 	private String firstName ;
 	
-	@Pattern(regexp="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*){1,100}$")	
+	@Pattern(regexp="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*){1,100}$", message="Invalid last name.")	
 	private String lastName ;	
 
-	@Pattern(regexp="^[\\w-]+(?:\\.[\\w-]+)*@(?:[\\w-]+\\.)+[a-zA-Z]{2,7}$")
+	@Pattern(regexp="^[\\w-]+(?:\\.[\\w-]+)*@(?:[\\w-]+\\.)+[a-zA-Z]{2,7}$", message="Invalid email.")
 	private String email ;
 	
-	@Min(18)
-	@Max(100)
-	private Integer age ;
+	@Min(value=18, message="You must be > 18 to use this form.")
+	@Max(value=100, message="You must < 100 to use this form.")
+	private int age ;
 	
-	@Pattern(regexp="^\\D?(\\d{3})\\D?\\D?(\\d{3})\\D?(\\d{4})$")
+	@Pattern(regexp="^\\D?(\\d{3})\\D?\\D?(\\d{3})\\D?(\\d{4})$", message="Invalid phone format.")
 	private String phone ;
 	
-	@NotNull()
+	@NotNull(message="Address must be set.")
 	@Valid()
-	private Address address ;
+	private Address address;
+		
+	public Person() {
+		this.address = new Address() ;
+	}
 	
 	/*
 	 * Setter for Person's first name.

@@ -14,19 +14,19 @@ public class Address implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	@Pattern(regexp="^[a-zA-Z0-9 .-]{3,100}$")
+	@Pattern(regexp="^[a-zA-Z0-9 .-]{3,100}$", message="Invalid street format.")
 	public String street ;
 	
-	@Pattern(regexp="^[a-zA-Z0-9 -]{2,100}$")	
+	@Pattern(regexp="^[a-zA-Z0-9 -]{2,100}$", message="Enter proper city.")	
 	public String city;
 	
-	@Pattern(regexp="^(AE|AL|AK|AP|AS|AZ|AR|CA|CO|CT|DE|DC|FM|FL|GA|GU|HI|ID|IL|IN|IA|KS|KY|LA|ME|MH|MD|MA|MI|MN|MS|MO|MP|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PW|PA|PR|RI|SC|SD|TN|TX|UT|VT|VI|VA|WA|WV|WI|WY)$")
-	public String state ;
+	@Pattern(regexp="^(AE|AL|AK|AP|AS|AZ|AR|CA|CO|CT|DE|DC|FM|FL|GA|GU|HI|ID|IL|IN|IA|KS|KY|LA|ME|MH|MD|MA|MI|MN|MS|MO|MP|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PW|PA|PR|RI|SC|SD|TN|TX|UT|VT|VI|VA|WA|WV|WI|WY)$", message="No such state acronym.")
+	public String state;
 
-	@Pattern(regexp="^\\d{5}(-\\d{4})?$")
+	@Pattern(regexp="^\\d{5}(-\\d{4})?$", message="Invalid zip code.")
 	public String zipCode ;
 	
-	@Pattern(regexp="^(US|USA|United States|United States Of America)$")
+	@Pattern(regexp="^(US|USA|United States|United States Of America)$", message="Please enter US or USA")
 	public String country ;	
 	
 	/**

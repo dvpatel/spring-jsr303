@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Error!!</title>
-</head>
-<body>
-
-<p>Invalid request.</p>
-
-</body>
-</html>
+<div class="main wrapper clearfix">
+    <article>
+        <header>
+			<h1>Not found <span>:(</span></h1>
+        </header>
+        <section>                    
+    		<p>Sorry, but the page you were trying to view does not exist.</p>
+    		<p>It looks like this was the result of either:</p>
+    		<ul>
+    			<li>a mistyped address</li>
+				<li>an out-of-date link</li>
+				<li>or a System error</li>
+				<li><a href=".">Go back to form</a></li>
+			</ul>
+    	</section>
+    </article>
+</div>

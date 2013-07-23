@@ -23,7 +23,7 @@ public class PrintUtility {
 	public static void printMessage(Log log, Set<?> violations) {						
 		for (Object o : violations) {
 			ConstraintViolation<?> p = (ConstraintViolation<?>) o ;
-			log.info("Forced violation ("+ violations.size() + "):  "  + p.getPropertyPath().toString() + " " + p.getMessage() + "  ("+ p.getInvalidValue() +")") ;			
+			log.info("Forced violation ("+ violations.size() + "):  "  + p.getPropertyPath().toString() + " -- " + p.getMessage() + "  ("+ p.getInvalidValue() +")") ;			
 		}		
 	}
 
