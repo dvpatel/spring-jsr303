@@ -38,11 +38,7 @@ public class Person implements Serializable{
 	@NotNull(message="Address must be set.")
 	@Valid()
 	private Address address;
-		
-	public Person() {
-		this.address = new Address() ;
-	}
-	
+			
 	/*
 	 * Setter for Person's first name.
 	 * @param inp first name.

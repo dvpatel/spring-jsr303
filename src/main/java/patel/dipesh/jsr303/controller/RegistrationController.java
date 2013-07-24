@@ -14,6 +14,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import patel.dipesh.jsr303.model.Address;
 import patel.dipesh.jsr303.model.Person;
@@ -28,6 +29,8 @@ import patel.dipesh.jsr303.model.Person;
  */
 
 @Controller
+@RequestMapping("/")
+@SessionAttributes("person")
 public class RegistrationController {
 
 	protected final Log log = LogFactory.getLog(getClass());
@@ -35,12 +38,14 @@ public class RegistrationController {
 	/*
 	 * Present input form
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	public String presentRegistrationForm(ModelMap model) {
 				
-		//  Form fields will be binded to Person and Address object.
+		//  Form fields will be binded to Person object which is added to servlet session.
 		Person person = new Person() ;
-						
+		Address address = new Address() ;
+		person.setAddress(address) ;
+								
 		//  Make Models available to form ;
 		model.addAttribute("person", person) ;
 		return "inputForm" ;
@@ -50,7 +55,7 @@ public class RegistrationController {
 	/*
 	 * Input processor.  Present results page or error page which is registration page with in-line error
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.POST)
+	@RequestMapping(method = RequestMethod.POST)
 	public String processRegistrationForm(@ModelAttribute("person") @Valid Person person, BindingResult result, ModelMap model) {	
 
 		/*
