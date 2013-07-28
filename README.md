@@ -19,8 +19,8 @@ Code Access:
 *  git clone git://github.com/dvpatel/spring-jsr303.git
 	
 Run Unit Tests:  
-*  cd DEV_SOURCE_DIR
-*  mvn tests
+*  cd DEV_SOURCE_DIR/spring-jsr303
+*  mvn test
 	
 Run Sample App:
 *  cd DEV_SOURCE_DIR/spring-jsr303
