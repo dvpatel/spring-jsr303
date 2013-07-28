@@ -21,7 +21,7 @@ import static org.junit.Assert.*;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("file:src/main/webapp/WEB-INF/RequestDispatcher-servlet.xml")
+@ContextConfiguration("file:src/test/resources/RequestDispatcher-junit-test.xml")
 public class AddressTests {
 
 	protected final Log log = LogFactory.getLog(getClass());

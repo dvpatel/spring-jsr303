@@ -21,7 +21,7 @@ import dvp.jsr303.model.Person;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("file:src/main/webapp/WEB-INF/RequestDispatcher-servlet.xml")
+@ContextConfiguration("file:src/test/resources/RequestDispatcher-junit-test.xml")
 public class PersonTests {
 	
 	protected final Log log = LogFactory.getLog(getClass());
