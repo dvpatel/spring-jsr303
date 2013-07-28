@@ -1,14 +1,16 @@
 /**
  * 
  */
-package patel.dipesh.jsr303.model.tests;
+package dvp.jsr303.model.tests;
 
 import java.util.Set;
 import org.apache.commons.logging.Log;
+
+import dvp.jsr303.model.Person;
+
 import javax.validation.ConstraintViolation;
 
 
-import patel.dipesh.jsr303.model.Person;
 
 /**
  * Simple print utility to output junit  results for failed cases.

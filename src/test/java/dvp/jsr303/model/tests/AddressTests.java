@@ -1,4 +1,4 @@
-package patel.dipesh.jsr303.model.tests;
+package dvp.jsr303.model.tests;
 
 import java.util.Set;
 import javax.validation.ConstraintViolation;
@@ -10,9 +10,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.ContextConfiguration;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import dvp.jsr303.model.Address;
 import static org.junit.Assert.*;
 
-import patel.dipesh.jsr303.model.Address;
 
 /**
  * Sample unit tests for Address model.  Include additional unit tests as you see fit for object or individual properties. 

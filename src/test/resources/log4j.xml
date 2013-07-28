@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="patel.dipesh.jsr303">
+	<logger name="dvp.jsr303">
 		<level value="info" />
 	</logger>
 	

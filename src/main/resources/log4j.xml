@@ -10,7 +10,7 @@
 		</layout>
 	</appender>
 	
-	<logger name="patel.dipesh.jsr303">
+	<logger name="dvp.jsr303">
 		<level value="debug" />
 	</logger>
 	

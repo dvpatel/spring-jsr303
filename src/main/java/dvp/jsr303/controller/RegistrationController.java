@@ -1,4 +1,4 @@
-package patel.dipesh.jsr303.controller;
+package dvp.jsr303.controller;
 
 import java.io.IOException;
 
@@ -16,8 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import patel.dipesh.jsr303.model.Address;
-import patel.dipesh.jsr303.model.Person;
+import dvp.jsr303.model.Address;
+import dvp.jsr303.model.Person;
+
 
 /**
  * 

@@ -1,4 +1,4 @@
-package patel.dipesh.jsr303.model;
+package dvp.jsr303.model;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package patel.dipesh.jsr303.model.tests;
+package dvp.jsr303.model.tests;
 
 import java.util.Set;
 import javax.validation.ConstraintViolation;
@@ -11,8 +11,9 @@ import static org.junit.Assert.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.ContextConfiguration;
-import patel.dipesh.jsr303.model.Address;
-import patel.dipesh.jsr303.model.Person;
+
+import dvp.jsr303.model.Address;
+import dvp.jsr303.model.Person;
 
 /**
  * Sample unit tests for Person model object and properties.  Include additional unit tests as you see fit.
