@@ -10,9 +10,9 @@ System Requirements:
 *  Git +1.8
 *  Maven +3.X
 
-All dependencies, including Spring, Hibernate, tomcat7, and supporting components are configured using maven build envionrment.  See pom.xml for complete details.
+All dependencies, including Spring, Hibernate, tomcat7, and supporting components are configured using maven build manager.  See pom.xml for complete details.
 
-App run-time
+Run-time
 -------------------
 Code Access:  
 *  cd DEV_SOURCE_DIR
