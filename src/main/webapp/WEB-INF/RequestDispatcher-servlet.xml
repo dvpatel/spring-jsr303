@@ -14,7 +14,6 @@
    http://www.springframework.org/schema/context 
    http://www.springframework.org/schema/context/spring-context.xsd">
    
-	<context:component-scan base-package="dvp.jsr303.controller" />
 	<mvc:annotation-driven />
 	
 	<!-- Data validation -->
@@ -35,12 +34,13 @@
   		<property name="prefix" value=""/>
   		<property name="suffix" value=".vm"/>
 	  	<property name="exposeSpringMacroHelpers" value="true"/>
-	  	<property name="order" value="2"/>
 	</bean>
 
 	<!-- bind your messages.properties -->
 	<bean class="org.springframework.context.support.ResourceBundleMessageSource" id="messageSource">
 		<property name="basename" value="messages" />
 	</bean>
+							
+	<context:component-scan base-package="dvp.jsr303.controller" />
 							
 </beans>

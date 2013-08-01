@@ -89,6 +89,18 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>4.3.1.Final</version>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator-annotation-processor</artifactId>
+			<version>4.3.1.Final</version>
+		</dependency>
+
+		<!-- Encoding Utility -->
+		<dependency>
+        		<groupId>org.owasp.encoder</groupId>
+        		<artifactId>encoder</artifactId>
+        		<version>1.1</version>
+		</dependency>
 
 		<!-- HDiv -->
 		<dependency>
@@ -133,6 +145,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>				
 				<configuration>
+					<createChecksum>true</createChecksum>
 					<source>1.6</source>
 					<target>1.6</target>
 				</configuration>

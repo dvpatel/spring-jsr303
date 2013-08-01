@@ -43,7 +43,7 @@ public class AddressTests {
 		address.setStreet("100 Main St.") ;
 		address.setCity("Fremont") ;
 		address.setState("CA") ;
-		address.setZipCode("94555") ;
+		address.setZipcode("94555") ;
 		address.setCountry("USA") ;
 		
 		// validate the input
@@ -60,16 +60,16 @@ public class AddressTests {
 	public void testInvalidAddressObject() {
 
 		Address address = new Address() ;
-		address.setStreet("<sdfk>sdlifj<sdlfjk") ;
+		address.setStreet("<script>alert('XSS')</script>") ;
 		address.setCity("<OU(*F(D(H(SD*") ;
 		address.setState("ABCXYZ") ;
-		address.setZipCode("asdfasdf") ;
+		address.setZipcode("asdfasdf") ;
 		address.setCountry("asdofijasidf") ;
 		
 		// validate the input
 		Set<ConstraintViolation<Address>> violations = validator.validate(address);
 		PrintUtility.printMessage(log, violations);
-				
+						
 		//  Expecting 6 failures ;
 		assertEquals(violations.size(), 5);		
 	}		

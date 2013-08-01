@@ -24,7 +24,7 @@ public class Address implements Serializable{
 	public String state;
 
 	@Pattern(regexp="^\\d{5}(-\\d{4})?$", message="Invalid zip code.")
-	public String zipCode ;
+	public String zipcode ;
 	
 	@Pattern(regexp="^(US|USA|United States|United States Of America)$", message="Please enter US or USA")
 	public String country ;	
@@ -75,15 +75,15 @@ public class Address implements Serializable{
 	/**
 	 * @return the zip
 	 */
-	public String getZipCode() {
-		return zipCode ;
+	public String getZipcode() {
+		return zipcode ;
 	}
 	
 	/**
 	 * @param zip the zip to set
 	 */
-	public void setZipCode(String zip) {
-		this.zipCode = zip;
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
 	}	
 	
 	/**

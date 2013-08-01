@@ -36,8 +36,8 @@ public class PersonTests {
 	public void testValidPersonObject() {
 	
 		Person person = new Person() ;
-		person.setFirstName("John") ;
-		person.setLastName("Smith") ;
+		person.setFirstname("John") ;
+		person.setLastname("Smith") ;
 		person.setAge(18) ;
 		person.setEmail("test@yahoo.com") ;
 		person.setPhone("(384)847-2939") ;
@@ -46,7 +46,7 @@ public class PersonTests {
 		address.setStreet("100 Paseo Padrea Pkwy.") ;
 		address.setCity("Fremont") ;
 		address.setState("CA") ;
-		address.setZipCode("94555") ;
+		address.setZipcode("94555") ;
 		address.setCountry("USA") ;
 		
 		person.setAddress(address) ;
@@ -62,8 +62,8 @@ public class PersonTests {
 	public void testInvalidPersonObject() {
 	
 		Person person = new Person() ;
-		person.setFirstName("<script>bad</script>") ;
-		person.setLastName(">>''>>") ;
+		person.setFirstname("<script>alert('XSS')</script>") ;
+		person.setLastname(">>''>>") ;
 		person.setAge(999) ;
 		person.setEmail("test@asdofj.cojaiojdsfijasidfjaosidjf") ;
 		person.setPhone("98475837458739847593745983457") ;		
@@ -81,17 +81,17 @@ public class PersonTests {
 	public void testPersonObjectWithBadAddress() {
 	
 		Person person = new Person() ;
-		person.setFirstName("John") ;
-		person.setLastName("Smith") ;
+		person.setFirstname("John") ;
+		person.setLastname("Smith") ;
 		person.setAge(21) ;
 		person.setEmail("test@yahoo.com") ;
 		person.setPhone("(384)847-2939") ;
 		
 		Address address = new Address() ;
-		address.setStreet("<script>bad_address</script>") ;
+		address.setStreet("<script>alert('XSS')</script>") ;
 		address.setCity("<M*DF*(SDF*(F") ;
 		address.setState("ABC123") ;
-		address.setZipCode("ACD##DD") ;
+		address.setZipcode("ACD##DD") ;
 		address.setCountry("X3d23ddd") ;
 		
 		person.setAddress(address) ;
@@ -103,6 +103,5 @@ public class PersonTests {
 		//  Expecting 6 failures ;
 		assertEquals(violations.size(), 5);		
 	}		
-
 
 }
