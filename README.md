@@ -10,19 +10,26 @@ System Requirements:
 *  Git +1.8
 *  Maven +3.X
 
-All dependencies, including Spring, Hibernate, tomcat7, and supporting components are configured using maven build manager.  See pom.xml for complete details.
+All dependencies, including Spring, Hibernate, tomcat7, and other supporting components are retrieved and configured using maven project manager.  See pom.xml for complete details.
 
 Run-time
 -------------------
 Code Access:  
-*  cd DEV_SOURCE_DIR
-*  git clone git://github.com/dvpatel/spring-jsr303.git
+*  git clone https://github.com/dvpatel/spring-jsr303.git
+
+Build Project:  
+*  cd spring-jsr303
+*  mvn package
 	
 Run Unit Tests:  
-*  cd DEV_SOURCE_DIR/spring-jsr303
+*  cd spring-jsr303
 *  mvn test
 	
 Run Sample App:
-*  cd DEV_SOURCE_DIR/spring-jsr303
+*  cd spring-jsr303
 *  mvn tomcat7:run-war
 *  http://localhost:8080/spring-jsr303
+
+To clean:
+*  cd spring-jsr303
+*  mvn clean
