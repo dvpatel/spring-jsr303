@@ -34,19 +34,16 @@ import dvp.jsr303.model.Person;
 @RequestMapping("/")
 public class RegistrationController {
 
-	protected final Log log = LogFactory.getLog(getClass());
-	
+	protected final Log log = LogFactory.getLog(getClass());	
 	
 	/*
 	 * Create Person object
 	 */
-	private Person getPerson() {
-		
+	private Person getPerson() {		
 		Person person = new Person() ;
 		Address address = new Address() ;
 		person.setAddress(address) ;
-		return person ;
-		
+		return person ;		
 	}
 	
 	/*
@@ -73,13 +70,12 @@ public class RegistrationController {
 		
 		if (result.hasErrors()) {
 
-			/*
-			 * Error handling code.
-			 */		
-			
-			//For this implementation, simply reset error fields and return to inputForm page.
 			log.error("Data validation error during form processing.");		
 
+			/*
+			 * Error handling code.
+			 * For this implementation, simply reset error fields, and display in-line errors on inputForm page.
+			 */					
 			BeanWrapper b = new BeanWrapperImpl(person) ;			
 			BeanWrapper _b = new BeanWrapperImpl(this.getPerson()) ;			
 			for (FieldError fe : result.getFieldErrors()) {
