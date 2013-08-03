@@ -1,38 +1,29 @@
-<div class="main wrapper clearfix">
+<article>
+    <header>
+        <h2>Successful Validation</h2>
+    </header>
+    <section>
+    	<table>
+			<tr><td colspan="2"><b>Basic Information</b></td></tr>
+			<tr><td>First name:</td><td>$!{person.firstname}</td></tr>
+			<tr><td>Last name:</td><td>$!{person.lastname}</td></tr>
+			<tr><td>E-Mail:</td><td>$!{person.email}</td></tr>
+			<tr><td>Age:</td><td>$!{person.age}</td></tr>
+			<tr><td>Phone:</td><td>$!{person.phone}</td></tr>
+			<tr><td colspan="2"><b>Address</b></td></tr>
+			<tr><td>Street:</td><td>$!{person.address.street}</td></tr>
+			<tr><td>City:</td><td>$!{person.address.city}</td></tr>
+			<tr><td>State:</td><td>$!{person.address.state}</td></tr>
+			<tr><td>Zip code:</td><td>$!{person.address.zipcode}</td></tr>
+			<tr><td>Country:</td><td>$!{person.address.country}</td></tr>
+		</table>
 
-    <article>
-        <header>
-            <h2>Successful Validation</h2>
-        </header>
-        <section>
-        	<table>
-				<tr><td colspan="2"><b>Basic Information</b></td></tr>
-				<tr><td>First name:</td><td>$!{person.firstname}</td></tr>
-				<tr><td>Last name:</td><td>$!{person.lastname}</td></tr>
-				<tr><td>E-Mail:</td><td>$!{person.email}</td></tr>
-				<tr><td>Age:</td><td>$!{person.age}</td></tr>
-				<tr><td>Phone:</td><td>$!{person.phone}</td></tr>
-				<tr><td colspan="2"><b>Address</b></td></tr>
-				<tr><td>Street:</td><td>$!{person.address.street}</td></tr>
-				<tr><td>City:</td><td>$!{person.address.city}</td></tr>
-				<tr><td>State:</td><td>$!{person.address.state}</td></tr>
-				<tr><td>Zip code:</td><td>$!{person.address.zipcode}</td></tr>
-				<tr><td>Country:</td><td>$!{person.address.country}</td></tr>
-			</table>
-
-			<p>
-            	<a href=".">Back to form</a>
-			</p>
-        </section>
-        <footer>
-            <h3></h3>
-            <p></p>
-        </footer>
-    </article>
-
-    <aside>
-        <h3>Background</h3>
-        <p>This is a sample application that demonstrates how to perform data validation using JSR-303 Annotations.  Future example will do the same but using a declarative approach for data validation rather than annotations.  The program is based on Spring MVC, Velocity rendering engine, and HTML5 boilerplate templates.  And many of the RegEx patterns used for data validation are referenced from OWASP regex repository</p>
-    </aside>
-
-</div> <!-- #main -->
+		<p>
+        	<a href=".">Back to form</a>
+		</p>
+    </section>
+    <footer>
+        <h3></h3>
+        <p></p>
+    </footer>
+</article>

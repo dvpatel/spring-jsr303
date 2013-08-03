@@ -20,7 +20,7 @@
 
         <div class="header-container">
             <header class="wrapper clearfix">
-                <h1 class="title">Data Validation Quick Start</h1>
+                <h1 class="title">Spring-JSR303 Starter</h1>
                 <nav>
                     <ul>
                         <li><a href="https://github.com/dvpatel/spring-jsr303">Code@GitHub</a></li>
@@ -31,7 +31,18 @@
             </header>
         </div>
 
-        <div class="main-container">$!screen_content</div>
+        <div class="main-container">
+        	<div class="main wrapper clearfix">
+        		<div>
+        			$!screen_content
+        		</div>
+        		
+        		<aside>
+        			<h3>Background</h3>
+        			<p>This is a sample application that demonstrates how to perform data validation using JSR-303, specifically using JSR-303 Annotations.  It is developed using Spring MVC, Velocity, HTML5 boilerplate templates, and other Open Source assets.  Many of the RegEx patterns used for data validation are leveraged from OWASP RegEx Validation Repository.  An example based on declarative data validation will be provided in the future.</p>
+    			</aside>
+    		</div>
+        </div>
 
         <div class="footer-container">
         	<!--
