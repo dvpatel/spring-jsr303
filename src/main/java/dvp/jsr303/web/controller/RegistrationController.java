@@ -1,4 +1,4 @@
-package dvp.jsr303.controller;
+package dvp.jsr303.web.controller;
 
 import java.io.IOException;
 

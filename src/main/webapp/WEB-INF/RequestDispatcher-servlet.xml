@@ -41,6 +41,6 @@
 		<property name="basename" value="messages" />
 	</bean>
 							
-	<context:component-scan base-package="dvp.jsr303.controller" />
+	<context:component-scan base-package="dvp.jsr303.web.controller" />
 							
 </beans>
