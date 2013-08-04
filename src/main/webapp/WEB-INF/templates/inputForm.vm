@@ -43,7 +43,7 @@
 			#foreach($error in $status.errorMessages) <div class="errorBlock">$error</div> #end			
 
 			<label for="name">State Acronym:</label>  
-			<input type="text" id="state" name="address.state" value="$!{person.address.state}" placeholder="Enter State"/>
+			<input type="text" id="state" name="address.state" value="$!{person.address.state}" placeholder="Enter State Acronym"/>
 			#springBind( "person.address.state" )		
 			#foreach($error in $status.errorMessages) <div class="errorBlock">$error</div> #end			
 
@@ -53,7 +53,7 @@
 			#foreach($error in $status.errorMessages) <div class="errorBlock">$error</div> #end			
 			  
 			<label for="name">Country Acronym:</label>  
-			<input type="text" id="country" name="address.country" value="$!{person.address.country}" placeholder="Enter Country"/>
+			<input type="text" id="country" name="address.country" value="$!{person.address.country}" placeholder="Enter Country: US or USA"/>
 			#springBind( "person.address.country" )		
 			#foreach($error in $status.errorMessages) <div class="errorBlock">$error</div> #end			
 			  
