@@ -16,9 +16,6 @@
    
    <!-- Settings for unit testing. -->
    
-	<context:component-scan base-package="dvp.jsr303.web.controller" />
-	<mvc:annotation-driven />
-	
 	<!-- Data validation -->
 	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
 		
